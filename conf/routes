@@ -1,0 +1,12 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+GET     /search                     controllers.Search.search()
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /getArray/:query            controllers.Search.getResultArray(query: String)
+GET    /getCategories               controllers.Search.getCategories()      
+GET   /getSubCategories/:cat                  controllers.Search.getSubCategories(cat: String)
